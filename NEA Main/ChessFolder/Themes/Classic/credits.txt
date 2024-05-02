@@ -1,0 +1,1 @@
+Chess themes: https://github.com/lichess-org/lila/tree/master/public/piece 
