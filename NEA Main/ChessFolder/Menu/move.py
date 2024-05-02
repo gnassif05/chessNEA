@@ -76,7 +76,7 @@ class Move:
     # get the proper chess notation of a move
     def get_chess_notation(self, turn_number, object) -> str:
         # if the move is a castle move:
-        if self.the_piece_moved[1] == "K" and self.ending_column - self.starting_column !=1:
+        if self.the_piece_moved[1] == "K" and abs(self.ending_column - self.starting_column) !=1 and abs(self.starting_row - self.ending_row) == 0:
             if self.starting_column - self.ending_column == 2:
                 notation = "O-O-O"
                 return str(turn_number) + "." + notation
